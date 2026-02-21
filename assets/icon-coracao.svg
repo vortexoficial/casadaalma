@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="Coração">
+  <defs>
+    <linearGradient id="heart" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#A67C5B"/>
+      <stop offset="1" stop-color="#7A4E3A"/>
+    </linearGradient>
+  </defs>
+  <path d="M32 55s-18-11.3-24.2-23.3C2.3 20.3 10.1 10 21.6 10c5.2 0 8.5 2.7 10.4 5.2C33.9 12.7 37.2 10 42.4 10 53.9 10 61.7 20.3 56.2 31.7 50 43.7 32 55 32 55Z" fill="none" stroke="url(#heart)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M22 20c2.9-2.6 7.2-2.4 9.9 0" fill="none" stroke="#7A4E3A" stroke-opacity="0.35" stroke-width="3" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" role="img" aria-label="Ícone de uma casa">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7A4E3A"/>
+      <stop offset="1" stop-color="#A67C5B"/>
+    </linearGradient>
+  </defs>
+  <rect x="12" y="12" width="104" height="104" rx="28" fill="#F6F0E6"/>
+  <rect x="12" y="12" width="104" height="104" rx="28" fill="none" stroke="#7A4E3A" stroke-opacity="0.25" stroke-width="3"/>
+  <path d="M30 62.5 64 34l34 28.5" fill="none" stroke="url(#g)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M40 58.5v38.5c0 3.3 2.7 6 6 6h36c3.3 0 6-2.7 6-6V58.5" fill="none" stroke="#2B1F1A" stroke-opacity="0.85" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M57 103V79.5c0-3.9 3.1-7 7-7s7 3.1 7 7V103" fill="none" stroke="#2B1F1A" stroke-opacity="0.85" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M50 71.5h11M67 71.5h11" fill="none" stroke="#7A4E3A" stroke-opacity="0.55" stroke-width="4" stroke-linecap="round"/>
+</svg>
