@@ -5,6 +5,46 @@
 
   const prefersReducedMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
 
+  const wireLoader = () => {
+    const root = document.documentElement;
+    const loader = document.querySelector(".page-loader");
+    if (!(loader instanceof HTMLElement)) {
+      root.classList.remove("is-loading", "is-loader-out");
+      return;
+    }
+
+    const startedAt = performance.now();
+    const MIN_VISIBLE_MS = 1800;
+
+    const finish = () => {
+      const elapsed = performance.now() - startedAt;
+      const delay = Math.max(0, MIN_VISIBLE_MS - elapsed);
+
+      window.setTimeout(() => {
+        // Revela o conteúdo e inicia a saída
+        root.classList.add("is-loader-out");
+
+        if (prefersReducedMotion) {
+          loader.remove();
+          root.classList.remove("is-loading", "is-loader-out");
+          return;
+        }
+
+        const onAnimEnd = (e) => {
+          if (e.target !== loader) return;
+          loader.removeEventListener("animationend", onAnimEnd);
+          loader.remove();
+          root.classList.remove("is-loading", "is-loader-out");
+        };
+
+        loader.addEventListener("animationend", onAnimEnd);
+      }, delay);
+    };
+
+    if (document.readyState === "complete") finish();
+    else window.addEventListener("load", finish, { once: true });
+  };
+
   const setYear = () => {
     const yearEl = document.getElementById("ano");
     if (yearEl) yearEl.textContent = String(new Date().getFullYear());
@@ -230,6 +270,7 @@
   };
 
   setYear();
+  wireLoader();
   wireWhatsAppLinks();
   wireSmoothScroll();
   wireMobileNav();

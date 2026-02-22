@@ -1,5 +1,5 @@
 ﻿<!doctype html>
-<html lang="pt-BR" class="no-js">
+<html lang="pt-BR" class="no-js is-loading">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -20,6 +20,17 @@
 </head>
 
 <body id="topo">
+
+  <!-- Loader (antes do site aparecer) -->
+  <div class="page-loader" role="status" aria-live="polite" aria-label="Carregando">
+    <div class="page-loader__card">
+      <img class="page-loader__logo" src="assets/logo-casa-da-alma.svg" width="220" height="54" alt="Casa da Alma" decoding="async" />
+      <span class="sr-only">Carregando...</span>
+      <div class="page-loader__dots" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
 
   <!-- Header: Sticky com efeito glass -->
   <header class="site-header" data-elevate>
